@@ -1,9 +1,9 @@
 const services = [
   {
     number: "01",
-    title: "Verkauf & Vermarktung",
+    title: "Prodaja i marketing",
     description:
-      "Professionelle Aufbereitung, gezielte Vermarktung und diskrete Nähe zum Markt — für den bestmöglichen Verkaufspreis Ihrer Liegenschaft.",
+      "Profesionalna priprema, ciljani marketing i diskretna blizina tržištu — za najbolju moguću prodajnu cenu vaše nekretnine.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /><path d="M11 8v6M8 11h6" />
@@ -12,9 +12,9 @@ const services = [
   },
   {
     number: "02",
-    title: "Immobilienbewertung",
+    title: "Procena nekretnine",
     description:
-      "Fundierte Marktwertanalyse auf Basis aktueller Marktdaten und jahrelanger Erfahrung. Ehrlich, realistisch und verlässlich.",
+      "Solidna analiza tržišne vrednosti zasnovana na aktuelnim podacima i višegodišnjem iskustvu. Iskreno, realno i pouzdano.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
@@ -23,9 +23,9 @@ const services = [
   },
   {
     number: "03",
-    title: "Beratung & Begleitung",
+    title: "Savetovanje i podrška",
     description:
-      "Von der ersten Idee bis zur Vertragsunterzeichnung: persönliche, fachkundige Beratung, die Sie durch jede Phase sicher führt.",
+      "Od prve ideje do potpisivanja ugovora: lično, stručno savetovanje koje vas sigurno vodi kroz svaku fazu.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
@@ -36,20 +36,17 @@ const services = [
 
 export function ServicesSectionV2() {
   return (
-    <section id="dienstleistungen" className="bg-[#F5F7FA] py-28">
+    <section id="usluge" className="bg-[#F5F7FA] py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
         {/* Header */}
         <div className="mb-20 text-center">
-          <p className="mb-4 font-sans text-xs font-semibold tracking-[0.2em] uppercase text-brand-blue">
-            Dienstleistungen
-          </p>
           <h2 className="font-sans text-4xl font-black tracking-tight text-brand-dark md:text-5xl">
-            Massgeschneiderte Leistungen für Sie
+            Usluge prilagođene vama
           </h2>
           <p className="mx-auto mt-5 max-w-xl font-sans text-base leading-relaxed text-brand-muted">
-            Immobilien sind mehr als vier Wände — sie sind Lebensabschnitte.
-            Ich begleite Sie mit Kompetenz, Diskretion und Einfühlungsvermögen.
+            Nekretnine su više od četiri zida — one su deo životnih priča.
+            Pratim vas s kompetencijom, diskrecijom i empatijom.
           </p>
         </div>
 

@@ -15,9 +15,9 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "IMH Vermarktung – Verlässlich. Diskret. Erfolgreich.",
+  title: "Nekretninice – Pouzdano. Diskretno. Uspešno.",
   description:
-    "Isabelle Maud Haesler – Ihre vertrauensvolle Immobilienmaklerin in der Schweiz. Professionelle Vermarktung von exklusiven Liegenschaften.",
+    "Nekretninice – vaš pouzdani partner za kupovinu i prodaju nekretnina. Profesionalno posredovanje ekskluzivnih objekata.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="de"
+      lang="sr"
       className={`${montserrat.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">

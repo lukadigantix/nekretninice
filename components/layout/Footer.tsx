@@ -12,7 +12,7 @@ export function Footer() {
               <BrandLogo size="lg" inverted />
             </Link>
             <p className="font-sans text-xs tracking-[0.15em] uppercase text-brand-muted">
-              Verlässlich – Diskret – Erfolgreich
+              Pouzdano – Diskretno – Uspešno
             </p>
           </div>
 
@@ -24,18 +24,17 @@ export function Footer() {
                 Kontakt
               </h3>
               <address className="not-italic flex flex-col gap-2 font-sans text-sm text-brand-border/80">
-                <span>Isabelle Maud Haesler</span>
                 <a
-                  href="mailto:isabelle.haesler@imh-vermarktung.ch"
+                  href="mailto:nekretninice@gmail.com"
                   className="hover:text-brand-teal transition-colors"
                 >
-                  isabelle.haesler@imh-vermarktung.ch
+                  nekretninice@gmail.com
                 </a>
                 <a
-                  href="tel:+41786180401"
+                  href="tel:+38163289123"
                   className="hover:text-brand-teal transition-colors"
                 >
-                  +41 78 618 04 01
+                  +381 63 289 123
                 </a>
               </address>
             </div>
@@ -43,13 +42,13 @@ export function Footer() {
             {/* Navigation */}
             <div className="flex flex-col gap-3">
               <h3 className="font-sans text-xs font-semibold tracking-widest uppercase text-brand-teal">
-                Navigation
+                Navigacija
               </h3>
               <ul className="flex flex-col gap-2">
                 {[
-                  { href: "#ueber-mich", label: "Über mich" },
-                  { href: "#dienstleistungen", label: "Dienstleistungen" },
-                  { href: "#objekte", label: "Objekte" },
+                  { href: "#o-meni", label: "O meni" },
+                  { href: "#usluge", label: "Usluge" },
+                  { href: "#nekretnine", label: "Nekretnine" },
                   { href: "#kontakt", label: "Kontakt" },
                 ].map(({ href, label }) => (
                   <li key={href}>
@@ -68,7 +67,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center">
           <p className="font-sans text-xs text-brand-muted">
-            © {new Date().getFullYear()} IMH Vermarktung – Isabelle Maud Haesler. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Nekretninice. Sva prava zadržana.
           </p>
         </div>
       </div>

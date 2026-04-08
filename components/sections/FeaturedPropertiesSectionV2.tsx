@@ -7,28 +7,28 @@ import { properties } from "@/lib/data/properties";
 import type { Property } from "@/lib/data/properties";
 
 const filters = [
-  { id: "alle", label: "Alle", count: properties.length },
-  { id: "haus", label: "Haus", count: 2 },
-  { id: "wohnung", label: "Wohnung", count: 2 },
-  { id: "villa", label: "Villa", count: 1 },
-  { id: "grundstueck", label: "Grundstück", count: 1 },
+  { id: "alle", label: "Sve", count: properties.length },
+  { id: "haus", label: "Kuća", count: 2 },
+  { id: "wohnung", label: "Stan", count: 2 },
+  { id: "villa", label: "Vila", count: 1 },
+  { id: "grundstueck", label: "Plac", count: 1 },
 ];
 
 export function FeaturedPropertiesSectionV2() {
   const [activeFilter, setActiveFilter] = useState("alle");
 
   return (
-    <section id="objekte" className="bg-white py-24">
+    <section id="nekretnine" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
         {/* Split header */}
         <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-end">
           <h2 className="font-sans text-4xl font-black leading-tight tracking-tight text-brand-dark">
-            Ausgewählte<br />Liegenschaften
+            Odabrane<br />Nekretnine
           </h2>
           <p className="font-sans text-sm leading-relaxed text-brand-muted md:text-right">
-            Diskret vermittelte Objekte in der Schweiz —<br className="hidden md:block" />
-            sorgfältig ausgewählt und exklusiv vermarktet.
+            Diskretno posredovane nekretnine —<br className="hidden md:block" />
+            pažljivo odabrane i ekskluzivno ponuđene.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export function FeaturedPropertiesSectionV2() {
             href="#kontakt"
             className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-brand-border bg-white px-5 py-2 font-sans text-sm font-medium text-brand-dark transition-colors hover:border-brand-blue hover:text-brand-blue sm:self-auto"
           >
-            Alle anfragen
+            Svi upiti
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 17L17 7M7 7h10v10"/>
             </svg>
@@ -136,7 +136,7 @@ function PropertyCardV2({ property }: { property: Property }) {
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
-            {property.rooms} Zi.
+            {property.rooms} sobe
           </span>
           <span className="flex items-center gap-1.5 font-sans text-xs">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -145,7 +145,7 @@ function PropertyCardV2({ property }: { property: Property }) {
             {property.sqm} m²
           </span>
           <span className="ml-auto font-sans text-[0.65rem] font-medium text-brand-muted/60">
-            Baujahr {property.yearBuilt}
+            Godina {property.yearBuilt}
           </span>
         </div>
       </div>

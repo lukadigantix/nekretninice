@@ -4,28 +4,28 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Wie lange dauert der Verkaufsprozess einer Immobilie?",
-    a: "Die Dauer hängt von Lage, Preis und Marktsituation ab. In der Zürichsee-Region rechnen wir bei korrekt positionierten Objekten mit 60 bis 120 Tagen vom Erstgespräch bis zur Beurkundung. Dank unseres vorselektierten Käuferregisters verkürzen wir diesen Zeitraum häufig erheblich.",
+    q: "Koliko dugo traje proces prodaje nekretnine?",
+    a: "Trajanje zavisi od lokacije, cene i tržišne situacije. Za korektno pozicionirane nekretnine, obično računamo 60 do 120 dana od prvog razgovora do overe ugovora. Zahvaljujući našem predselektovanom registru kupaca, ovaj period često značajno skraćujemo.",
   },
   {
-    q: "Was kostet mich die Zusammenarbeit mit IMH Vermarktung?",
-    a: "Wir arbeiten auf Provisionsbasis – Sie zahlen ausschliesslich bei erfolgreichem Verkaufsabschluss. Die Höhe der Provision besprechen wir transparent im Erstgespräch und richten sie nach Objekttyp, Preissegment und gewünschtem Leistungsumfang aus.",
+    q: "Koliko košta saradnja sa Nekretninice?",
+    a: "Radimo na bazi provizije – plaćate isključivo pri uspeloj prodaji. Visinu provizije transparentno dogovaramo na prvom sastanku i prilagđavamo je tipu nekretnine, cenovnom segmentu i obimu traženih usluga.",
   },
   {
-    q: "Wie wird der Marktwert meiner Immobilie ermittelt?",
-    a: "Unsere Bewertung stützt sich auf eine Kombination aus hedonischen Verfahren, aktuellen Vergleichstransaktionen in der Region sowie unserer langjährigen Marktkenntnis am Zürichsee. Das Ergebnis ist eine realistische, marktgerechte Einschätzung – keine Gefälligkeitsbewertung.",
+    q: "Kako se utvrđuje tržišna vrednost moje nekretnine?",
+    a: "Naša procena zasniva se na kombinaciji hedonskih metoda, aktuelnih uporednih transakcija u regionu i našem dugogodišnjem poznavanju tržišta. Rezultat je realna, tržišna procena – ne uljudnačka brojka.",
   },
   {
-    q: "Wie diskret gehen Sie beim Verkauf vor?",
-    a: "Diskretion ist ein Kernversprechen von IMH Vermarktung. Auf Wunsch vermarkten wir Ihr Objekt ausschliesslich off-market über unser Netzwerk qualifizierter Interessenten – ohne öffentliche Inserate, ohne Beschilderung und ohne Nennung Ihres Namens.",
+    q: "Kako diskretno pristupate prodaji?",
+    a: "Diskrecija je ključno obećanje Nekretninice. Po želji, vašu nekretninu vermarktiramo isključivo off-market putem naše mreže kvalifikovanih interesanata – bez javnih oglasa, bez tabli i bez pomena vašeg imena.",
   },
   {
-    q: "Welche Regionen betreuen Sie?",
-    a: "Unser Schwerpunkt liegt an der Zürichsee-Region sowie im Kanton Zürich. Für exklusive Objekte sind wir auch in angrenzenden Kantonen tätig. Sprechen Sie uns an – wir prüfen gerne, ob wir das richtige Netzwerk für Ihr Objekt mitbringen.",
+    q: "Koje regione pokrivate?",
+    a: "Naš fokus je na Beogradu, Novom Sadu, Nišu i okolini. Aktivni smo i širom Srbije – od Ripnja i Mladenovca do Subotice i Kragujevca. Kontaktirajte nas – rado ćemo proveriti da li imamo pravu mrežu za vašu nekretninu.",
   },
   {
-    q: "Begleiten Sie auch den Kauf einer Immobilie?",
-    a: "Ja. Wir unterstützen kaufsuchende Klienten bei der Suche, Bewertung und Verhandlung – diskret und mit klarem Fokus auf Ihre Interessen. Als registrierter Suchkunde erhalten Sie Zugang zu Objekten, die nie öffentlich inseriert werden.",
+    q: "Da li pomažete i pri kupovini nekretnine?",
+    a: "Da. Podržavamo klijente koji traže nekretninu u procesu pretrage, procene i pregovora – diskretno i s jasnim fokusom na vaše interese. Kao registrovani kupac, dobijate pristup nekretninama koje nikada nisu javno oglašene.",
   },
 ];
 
@@ -38,19 +38,15 @@ export function FAQSection() {
         {/* Header */}
         <div className="mb-16 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-3">
-            <span className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-brand-blue">
-              Häufige Fragen
-            </span>
             <h2 className="font-display text-4xl font-black leading-tight text-brand-dark lg:text-5xl">
-              Was Sie wissen
+              Šta želite da
               <br />
-              <span className="text-brand-blue">möchten.</span>
+              <span className="text-brand-blue">znate.</span>
             </h2>
           </div>
           <p className="max-w-sm font-sans text-sm leading-relaxed text-brand-muted lg:text-right">
-            Transparenz ist uns wichtig. Hier finden Sie Antworten auf die
-            häufigsten Fragen rund um Immobilienverkauf, Bewertung und
-            Zusammenarbeit.
+            Transparentnost nam je važna. Ovde nalazite odgovore na
+            najčešća pitanja o prodaji, proceni i saradnji.
           </p>
         </div>
 

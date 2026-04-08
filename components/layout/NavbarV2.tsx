@@ -5,10 +5,10 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 
 const navLinks = [
-  { href: "#objekte", label: "Objekte" },
-  { href: "#dienstleistungen", label: "Dienstleistungen" },
-  { href: "#ueber-mich", label: "Über uns" },
-  { href: "#bewertung", label: "Bewertung" },
+  { href: "#nekretnine", label: "Nekretnine" },
+  { href: "#usluge", label: "Usluge" },
+  { href: "#o-meni", label: "O nama" },
+  { href: "#procena", label: "Procena" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
@@ -17,7 +17,7 @@ export function NavbarV2() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-6 pt-4 lg:px-12">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-brand-border bg-white px-4 py-2 shadow-sm">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-brand-border bg-white px-4 py-6 shadow-sm">
         {/* Logo */}
         <Link href="/">
           <BrandLogo size="sm" />
@@ -43,19 +43,19 @@ export function NavbarV2() {
             href="#kontakt"
             className="font-sans text-sm font-medium text-brand-muted hover:text-brand-dark transition-colors px-4 py-2"
           >
-            Anmelden
+            Prijava
           </Link>
           <Link
             href="#kontakt"
             className="rounded-full border border-brand-border px-5 py-2 font-sans text-sm font-medium text-brand-dark hover:border-brand-blue hover:text-brand-blue transition-colors"
           >
-            Objekt anfragen
+            Upit za nekretninu
           </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
-          aria-label="Menü öffnen"
+          aria-label="Otvori meni"
           className="flex flex-col gap-1.5 md:hidden"
           onClick={() => setMenuOpen((v) => !v)}
         >
@@ -86,7 +86,7 @@ export function NavbarV2() {
             className="mt-4 block rounded-full border border-brand-border px-5 py-3 text-center font-sans text-sm font-medium text-brand-dark"
             onClick={() => setMenuOpen(false)}
           >
-            Objekt anfragen
+            Upit za nekretninu
           </Link>
         </div>
       )}

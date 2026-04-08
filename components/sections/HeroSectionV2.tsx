@@ -4,23 +4,23 @@ import { useState } from "react";
 import Image from "next/image";
 
 const tabs = [
-  { id: "kaufen", label: "Kaufen" },
-  { id: "verkaufen", label: "Verkaufen" },
-  { id: "bewertung", label: "Bewertung" },
+  { id: "kupovina", label: "Kupovina" },
+  { id: "prodaja", label: "Prodaja" },
+  { id: "procena", label: "Procena" },
   { id: "kontakt", label: "Kontakt" },
 ];
 
 export function HeroSectionV2() {
-  const [activeTab, setActiveTab] = useState("kaufen");
+  const [activeTab, setActiveTab] = useState("kupovina");
 
   return (
     <section className="bg-white pt-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Headline */}
         <h1 className="mt-10 py-6 text-center font-sans text-4xl font-light leading-[1.05] tracking-tight text-brand-dark sm:text-6xl md:py-16 md:text-8xl lg:text-[7rem]">
-          Finden Sie Ihr{" "}
+          Pronađite svoj{" "}
           <br className="hidden sm:block" />
-          Traumzuhause.
+          dom iz snova.
         </h1>
 
         {/* Tabs — outside image, centered */}
@@ -47,7 +47,7 @@ export function HeroSectionV2() {
           <div className="flex overflow-hidden rounded-full bg-white shadow-lg ring-1 ring-brand-border">
             <input
               type="text"
-              placeholder="Adresse, Stadt, Postleitzahl, Agent"
+              placeholder="Adresa, grad, poštanski broj, agent"
               className="flex-1 bg-transparent px-6 py-4 font-sans text-sm text-brand-dark placeholder:text-brand-muted outline-none"
             />
             <button className="m-1.5 flex items-center gap-2 rounded-full bg-brand-dark px-6 py-3 font-sans text-sm font-medium text-white transition-colors hover:bg-brand-blue">
@@ -65,7 +65,7 @@ export function HeroSectionV2() {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              Entdecken
+              Traži
             </button>
           </div>
         </div>
@@ -76,7 +76,7 @@ export function HeroSectionV2() {
         <div className="relative h-[420px] md:h-[540px] lg:h-[600px]">
           <Image
             src="/images/hero1.jpg"
-            alt="Exklusive Immobilien in der Schweiz"
+            alt="Ekskluzivne nekretnine"
             fill
             className="object-cover"
             priority
@@ -97,8 +97,8 @@ export function HeroSectionV2() {
               <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.7 2.8-2.4 5.1-4.7 6.6l6.7 5.5C41.8 37.4 45 31.2 45 24c0-1.3-.2-2.7-.5-4z"/>
             </svg>
             <div>
-              <p className="font-sans text-xs font-bold text-brand-dark leading-tight md:text-sm">Google Bewertungen</p>
-              <p className="font-sans text-[0.65rem] text-brand-muted mt-0.5">Exzellent, 50+</p>
+              <p className="font-sans text-xs font-bold text-brand-dark leading-tight md:text-sm">Google ocene</p>
+              <p className="font-sans text-[0.65rem] text-brand-muted mt-0.5">Odlično, 50+</p>
               <div className="flex items-center gap-0.5 mt-1">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} width="11" height="11" viewBox="0 0 24 24" fill="#F5A623">
@@ -112,9 +112,9 @@ export function HeroSectionV2() {
           {/* Center — Quote (hidden on mobile) */}
           <div className="hidden flex-col items-center text-center sm:flex">
             <blockquote className="font-sans text-sm font-medium leading-snug text-brand-dark md:text-base">
-              «Isabelle Haesler findet für jede Liegenschaft den richtigen Käufer — verlässlich und diskret.»
+              «Za tri nedelje pronašli smo stan koji smo tražili godinama — bez stresa i skrivenih troškova.»
             </blockquote>
-            <p className="mt-2 font-sans text-xs text-brand-muted">Sandra K.</p>
+            <p className="mt-2 font-sans text-xs text-brand-muted">Marko T., Beograd</p>
           </div>
 
           {/* Right — Arrow + label */}
@@ -124,7 +124,7 @@ export function HeroSectionV2() {
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </button>
-            <p className="font-sans text-[0.65rem] text-brand-muted md:text-xs">Alle Bewertungen</p>
+            <p className="font-sans text-[0.65rem] text-brand-muted md:text-xs">Sve ocene</p>
           </div>
 
         </div>

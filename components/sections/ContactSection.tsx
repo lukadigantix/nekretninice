@@ -8,9 +8,8 @@ export function ContactSection() {
           {/* Text */}
           <div className="flex flex-col gap-8">
             <SectionTitle
-              eyebrow="Kontakt"
-              title="Sprechen wir über Ihre Liegenschaft"
-              subtitle="Ob Kauf, Verkauf oder einfach eine erste Einschätzung – ich bin für Sie da. Diskret, persönlich und unverbindlich."
+              title="Razgovarajmo o vašoj nekretnini"
+              subtitle="Bez obzira da li kupujete, prodajete ili samo želite prvu procenu – tu smo za vas. Diskretno, profesionalno i bez obaveza."
               align="left"
               inverted
             />
@@ -18,27 +17,17 @@ export function ContactSection() {
             <div className="flex flex-col gap-4">
               <ContactItem
                 label="Telefon"
-                value="+41 78 618 04 01"
-                href="tel:+41786180401"
+                value="+381 63 289 123"
+                href="tel:+38163289123"
               />
               <ContactItem
-                label="E-Mail"
-                value="isabelle.haesler@imh-vermarktung.ch"
-                href="mailto:isabelle.haesler@imh-vermarktung.ch"
+                label="E-pošta"
+                value="nekretninice@gmail.com"
+                href="mailto:nekretninice@gmail.com"
               />
             </div>
           </div>
 
-          {/* Decorative quote */}
-          <div className="border-l-2 border-brand-teal pl-8">
-            <blockquote className="font-display text-xl font-light italic leading-relaxed text-white/80 md:text-3xl">
-              «Ich verkaufe nicht einfach Immobilien — ich schaffe
-              Verbindungen, die zu Ihrer Geschichte passen.»
-            </blockquote>
-            <p className="font-sans text-xs tracking-widest uppercase text-brand-teal mt-6">
-              — Isabelle Maud Haesler
-            </p>
-          </div>
         </div>
       </div>
     </section>

@@ -2,12 +2,12 @@
 
 :root {
   /* Brand palette — logo colors */
-  --color-brand-blue: #32648C;
-  --color-brand-blue-light: #4A7FA8;
-  --color-brand-blue-dark: #224B6A;
-  --color-brand-teal: #50937F;
-  --color-brand-teal-light: #6BAE99;
-  --color-brand-teal-dark: #3A7262;
+  --color-brand-blue: #9B1515;
+  --color-brand-blue-light: #B52020;
+  --color-brand-blue-dark: #7A1010;
+  --color-brand-teal: #9B1515;
+  --color-brand-teal-light: #B52020;
+  --color-brand-teal-dark: #7A1010;
 
   /* Neutrals */
   --color-brand-dark: #1A1A1A;

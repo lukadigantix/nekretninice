@@ -1,35 +1,35 @@
 const usps = [
   {
     kpi: "12K",
-    kpiPrefix: "ab CHF",
+    kpiPrefix: "od €",
     kpiSuffix: "",
     tag: "Honorar",
-    title: "Fixhonorar – kein Prozentsatz",
-    desc: "Transparente Vergütung ab CHF 12'000, unabhängig vom Verkaufspreis. Kein Risiko, keine versteckten Kosten.",
+    title: "Fiksni honorar – bez procenta",
+    desc: "Transparentna naknada od €12.000, bez obzira na prodajnu cenu. Bez rizika, bez skrivenih troškova.",
   },
   {
     kpi: "24/7",
     kpiPrefix: "",
     kpiSuffix: "",
-    tag: "Marktdaten",
-    title: "Live-Marktanalysen",
-    desc: "Echtzeit-Einblicke in Preisbewegungen, Nachfrage und Vergleichsobjekte – jederzeit auf Ihrem Dashboard.",
+    tag: "Tržište",
+    title: "Analize tržišta uživo",
+    desc: "Uvid u kretanje cena, potražnju i uporedne nekretnine u realnom vremenu – uvek na vašem panelu.",
   },
   {
-    kpi: "360°",
+    kpi: "100%",
     kpiPrefix: "",
     kpiSuffix: "",
-    tag: "Technologie",
-    title: "Virtuelle Rundgänge",
-    desc: "Professionelle 3D-Touren sprechen internationale Käufer an – vollständig off-market, ohne öffentliche Sichtbarkeit.",
+    tag: "Uspesi​nost",
+    title: "Prodatih nekretnina",
+    desc: "Visok procenat uspešno zaključenih prodaja zahvaljujući preciznom pozicioniranju.",
   },
   {
-    kpi: "200+",
+    kpi: "500+",
     kpiPrefix: "",
-    kpiSuffix: "Objekte",
-    tag: "Netzwerk",
-    title: "Sotheby's & Engel&Völkers",
-    desc: "Als akkreditierte Partnerin erreichen wir qualifizierte Käufer weit über die Grenzen der Schweiz hinaus.",
+    kpiSuffix: "",
+    tag: "Baza kupaca",
+    title: "Proverenih kupaca",
+    desc: "Više od 500 aktivnih kupaca u bazi – brže uparivanje ponude sa potražnjom, bez gubljenja vremena.",
   },
 ];
 
@@ -42,16 +42,16 @@ export function CredibilitySection() {
         <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
           <div className="flex flex-col gap-3">
             <span className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-brand-teal">
-              Warum IMH Vermarktung
+            Zašto Nekretninice
             </span>
             <h2 className="font-display text-4xl font-black leading-tight text-white lg:text-5xl">
-              Klar messbare{" "}
-              <span className="text-brand-blue">Vorteile.</span>
+              Jasno merljive{" "}
+              <span className="text-brand-blue">prednosti.</span>
             </h2>
           </div>
           <p className="font-sans text-sm leading-relaxed text-white/50 lg:text-right lg:max-w-sm lg:ml-auto">
-            Wir verbinden Schweizer Präzision mit modernster Technologie
-            und einem internationalen Netzwerk – für Ihr Objekt.
+            Spajamo preciznost sa modernom tehnologijom
+            i međunarodnom mrežom – za vašu nekretninu.
           </p>
         </div>
 
@@ -74,19 +74,15 @@ export function CredibilitySection() {
 
               {/* KPI */}
               <div className="mb-6 flex flex-col gap-0.5">
-                {usp.kpiPrefix && (
-                  <span className="font-sans text-xs font-medium tracking-widest uppercase text-brand-blue/70">
-                    {usp.kpiPrefix}
-                  </span>
-                )}
+                <span className={`font-sans text-xs font-medium tracking-widest uppercase text-brand-blue/70 ${usp.kpiPrefix ? '' : 'invisible'}`}>
+                  {usp.kpiPrefix || '\u00A0'}
+                </span>
                 <span className="font-display text-5xl font-black leading-none text-white lg:text-6xl">
                   {usp.kpi}
                 </span>
-                {usp.kpiSuffix && (
-                  <span className="font-sans text-xs font-medium tracking-widest uppercase text-white/40 mt-1">
-                    {usp.kpiSuffix}
-                  </span>
-                )}
+                <span className={`font-sans text-xs font-medium tracking-widest uppercase text-white/40 mt-1 ${usp.kpiSuffix ? '' : 'invisible'}`}>
+                  {usp.kpiSuffix || '\u00A0'}
+                </span>
               </div>
 
               {/* Divider */}
