@@ -32,7 +32,7 @@ export function PropertyGallery({ title, images }: PropertyGalleryProps) {
 
   return (
     <>
-      <div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Main image — click to open lightbox */}
         <div
           className="relative h-135 w-full overflow-hidden bg-stone-100 cursor-zoom-in group"

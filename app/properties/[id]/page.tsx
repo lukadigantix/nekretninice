@@ -45,9 +45,9 @@ export default async function PropertyPage({ params }: PageProps) {
 
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 font-sans text-xs text-brand-muted">
-            <Link href="/" className="hover:text-brand-dark transition-colors">Home</Link>
+            <Link href="/" className="hover:text-brand-dark transition-colors">Početna</Link>
             <span>/</span>
-            <Link href="/#objekte" className="hover:text-brand-dark transition-colors">Objekte</Link>
+            <Link href="/#objekte" className="hover:text-brand-dark transition-colors">Nekretnine</Link>
             <span>/</span>
             <span className="text-brand-dark font-medium truncate max-w-50">{property.title}</span>
           </nav>
@@ -73,7 +73,7 @@ export default async function PropertyPage({ params }: PageProps) {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-muted">
                 <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
               </svg>
-              {property.rooms} Zimmer
+              {property.rooms} soba
             </span>
             <span className="flex items-center gap-2 font-sans text-sm text-brand-dark">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-muted">
@@ -85,13 +85,13 @@ export default async function PropertyPage({ params }: PageProps) {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-muted">
                 <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18"/>
               </svg>
-              Etage {property.floor}
+              Sprat {property.floor}
             </span>
             <span className="flex items-center gap-2 font-sans text-sm text-brand-dark">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-muted">
                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
               </svg>
-              Baujahr {property.yearBuilt}
+              Godina izgradnje {property.yearBuilt}
             </span>
             {/* Tags */}
             <div className="ml-auto flex gap-2">
@@ -110,29 +110,29 @@ export default async function PropertyPage({ params }: PageProps) {
             </div>
           </div>
 
+        </div>
+
+        {/* Gallery — full width, before info */}
+        <PropertyGallery title={property.title} images={galleryImages} />
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+
           {/* Main content: description + details */}
           <div className="py-12">
             <PropertyDetails property={property} />
           </div>
 
-        </div>
-
-        {/* Gallery — full width, after info */}
-        <PropertyGallery title={property.title} images={galleryImages} />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-
           {/* Location & Highlights */}
           <div className="py-16 border-b border-brand-border">
             <h2 className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-brand-blue mb-8">
-              Lage &amp; Standortvorteile
+              Lokacija &amp; prednosti
             </h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>), title: "Toplage", desc: property.city },
-                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>), title: "Wohnfläche", desc: `${property.sqm} m² Nutzfläche` },
-                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>), title: "Baujahr", desc: `Erbaut ${property.yearBuilt}` },
-                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>), title: "Diskretion", desc: "Geprüfte Interessenten" },
+                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>), title: "Vrhunska lokacija", desc: property.city },
+                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>), title: "Stambena površina", desc: `${property.sqm} m² korisne površine` },
+                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>), title: "Godina izgradnje", desc: `Izgrađeno ${property.yearBuilt}` },
+                { icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-blue"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>), title: "Diskrecija", desc: "Provjereni kupci" },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4 rounded-xl border border-brand-border p-5 hover:border-brand-blue/40 hover:shadow-sm transition-all">
                   <div className="mt-0.5 shrink-0 flex h-9 w-9 items-center justify-center rounded-full bg-brand-blue/8">
@@ -150,13 +150,13 @@ export default async function PropertyPage({ params }: PageProps) {
           {/* Services strip */}
           <div className="py-16 border-b border-brand-border">
             <h2 className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-brand-blue mb-8">
-              Unser Service für dieses Objekt
+              Naše usluge za ovaj objekat
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               {[
-                { title: "Homestaging", desc: "Professionelle Einrichtung für optimale Präsentation Ihrer Immobilie." },
-                { title: "360° Besichtigung", desc: "Virtuelle Rundgänge auf Anfrage — diskret und flexibel für qualifizierte Interessenten." },
-                { title: "Notarservice", desc: "Vollumfängliche Begleitung bis zur Beurkundung — ohne Stress, mit Erfahrung." },
+                { title: "Besplatna procjena", desc: "Nudimo besplatnu procjenu tržišne vrijednosti nekretnine bez ikakvih obaveza." },
+                { title: "Fotografija i marketing", desc: "Profesionalne fotografije i oglas na svim vodećim portalima za nekretnine." },
+                { title: "Pravna podrška", desc: "Pomažemo vam kroz cijeli proces kupovine — od pregovora do ovjere ugovora." },
               ].map(({ title, desc }) => (
                 <div key={title} className="flex flex-col gap-2 p-6 rounded-xl bg-[#F7F9FB] border border-brand-border">
                   <div className="h-0.5 w-8 bg-brand-blue rounded-full mb-1" />
@@ -176,7 +176,7 @@ export default async function PropertyPage({ params }: PageProps) {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="h-4 w-4">
                 <path d="M19 12H5M12 5l-7 7 7 7"/>
               </svg>
-              Zurück zur Übersicht
+              Nazad na pregled
             </Link>
           </div>
 
@@ -188,35 +188,35 @@ export default async function PropertyPage({ params }: PageProps) {
             <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
               <div className="flex flex-col gap-2">
                 <p className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-brand-blue">
-                  Ihr persönlicher Kontakt
+                  Vaš lični kontakt
                 </p>
                 <h2 className="font-display text-2xl font-black text-white md:text-3xl">
-                  Isabelle Maud Haesler
+                  Nekretninice
                 </h2>
                 <p className="font-sans text-sm text-white/60">
-                  Immobilienmaklerin · IMH Vermarktung · Zürich, Schweiz
+                  Agencija za nekretnine
                 </p>
                 <div className="mt-2 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-6">
-                  <a href="tel:+41786180401" className="flex items-center gap-2 font-sans text-sm text-white/80 hover:text-white transition-colors">
+                  <a href="tel:+38163289123" className="flex items-center gap-2 font-sans text-sm text-white/80 hover:text-white transition-colors">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-blue shrink-0">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.16 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6 7.09a16 16 0 006 6l.36-1.36a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
                     </svg>
-                    +41 78 618 04 01
+                    +381 63 289 123
                   </a>
-                  <a href="mailto:isabelle.haesler@imh-vermarktung.ch" className="flex items-center gap-2 font-sans text-sm text-white/80 hover:text-white transition-colors">
+                  <a href="mailto:nekretninice@gmail.com" className="flex items-center gap-2 font-sans text-sm text-white/80 hover:text-white transition-colors">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-blue shrink-0">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                       <polyline points="22,6 12,13 2,6"/>
                     </svg>
-                    isabelle.haesler@imh-vermarktung.ch
+                    nekretninice@gmail.com
                   </a>
                 </div>
               </div>
               <a
-                href={`mailto:isabelle.haesler@imh-vermarktung.ch?subject=Besichtigungsanfrage: ${property.title}`}
+                href={`mailto:nekretninice@gmail.com?subject=Zahtjev za razgledanje: ${property.title}`}
                 className="shrink-0 rounded-full bg-brand-blue px-8 py-4 font-sans text-sm font-semibold text-white hover:bg-white hover:text-brand-dark transition-all shadow-lg"
               >
-                Besichtigung anfragen
+                Zatražite razgledanje
               </a>
             </div>
           </div>
